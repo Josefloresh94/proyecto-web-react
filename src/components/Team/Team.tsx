@@ -4,6 +4,7 @@ import icon3 from "../../assets/images/icons/trophy.svg";
 import { Teammate } from "./Teammate";
 import { useEffect, useState } from "react";
 import { ITeammate } from "../../types/teammate";
+import styles from "./Team.module.css"
 
 export function Team(){
     const [teammate, setTeammate] = useState([]);
@@ -15,28 +16,28 @@ export function Team(){
     }, []);
 
     return (
-        <section className="team">
-            <div className="container team-container">
+        <section className={styles.team}>
+            <div className={`container ${styles.teamContainer}`}>
                 <div className="info">
                     <h2>We are proud of our design team</h2>
                     <p>Just sit back and relax while we take care of your business needs for you.</p>
                 </div>
-                <div className="team-statistics">
-                    <div className="team-statistics-item">
+                <div className={styles.teamStatistics}>
+                    <div className={styles.teamStatisticsItem}>
                         <div className="image">
                             <img src={icon1} alt="" />
                         </div>
                         <h3>1000+</h3>
                         <p>Completed Projects</p>
                     </div>
-                    <div className="team-statistics-item">
+                    <div className={styles.teamStatisticsItem}>
                         <div className="image">
                             <img src={icon2} alt="" />
                         </div>
                         <h3>50K+</h3>
                         <p>Happy Customers</p>
                     </div>
-                    <div className="team-statistics-item">
+                    <div className={styles.teamStatisticsItem}>
                         <div className="image">
                             <img src={icon3} alt=""/>
                         </div>
@@ -44,7 +45,7 @@ export function Team(){
                         <p>Awards Won</p>
                     </div>
                 </div>
-                <div className="team-list">
+                <div className={styles.teamList}>
                     {teammate.map((team: ITeammate) => (
                         <Teammate key={team.id} {...team} />
                     ))};

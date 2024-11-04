@@ -1,10 +1,11 @@
 import heroImage from "../../assets/images/hero.svg";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
+import styles from "./Hero.module.css";
 
 export function Hero(){
     return (
-        <section className="hero">
-            <div className="container hero-container">
+        <section className={styles.hero}>
+            <div className={`container ${styles.heroContainer}`}>
                 <div className="left">
                     <h1>A digital agency specializing on mobile design</h1>
                     <p>We are an award winning design agency that strongly believes in the power of creative ideas.</p>

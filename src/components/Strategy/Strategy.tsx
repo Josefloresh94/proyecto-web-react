@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { StrategyCard } from "./StrategyCard";
 import { IStrategyCard } from "../../types/strategyCard";
+import styles from "./Strategy.module.css";
 
 export function Strategy(){
     const [strategyCards, setStrategyCard] = useState([]);
@@ -13,8 +14,8 @@ export function Strategy(){
     }, []);
 
     return (
-        <section className="strategy">
-            <div className="container strategy-container">
+        <section className={styles.strategy}>
+            <div className={`container ${styles.strategyContainer}`}>
                 <div className="left">
                     <h2>Here are 3 working steps to organize our projects.</h2>
                     <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis.</p>
@@ -22,7 +23,7 @@ export function Strategy(){
                     <Button content="Learn More" href="/strategy"/>
                 </div>
                 <div className="right">
-                    <div className="strategy-cards-container">
+                    <div className={styles.strategyCardsContainer}>
                         {strategyCards.map((card: IStrategyCard) => (
                             <StrategyCard key={card.id} {...card}
                             />

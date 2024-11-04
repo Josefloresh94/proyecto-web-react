@@ -1,0 +1,64 @@
+.strategy {
+    background-color: var(--gray);
+    padding: 50px 0 100px;
+
+    & h2 {
+        margin-bottom: 30px;
+    }
+
+    & p {
+        margin-bottom: 20px;
+    }
+}
+
+.strategyContainer {
+    align-items: center;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.strategyCardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.strategyCard {
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 25%);
+    display: flex;
+    gap: 20px;
+    max-width: 520px;
+    padding: 20px;
+    position: relative;
+
+    & .order {
+        background-color: var(--skyblue);
+        border-radius: 100%;
+        color: var(--primary-color);
+        font-size: 22px;
+        font-weight: 600;
+        padding: 10px 12px;
+        width: fit-content;
+    }
+}
+
+@media (min-width: 768px){
+    .strategyContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .strategyCard {
+        &:nth-child(2) {
+            left: 50px;
+        }
+
+        &:nth-child(3) {
+            left: 20px;
+        }
+    }
+}

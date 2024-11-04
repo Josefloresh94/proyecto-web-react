@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ITestimonial } from "../../types/testimonial";
 import { TestimonialsItem } from "./TestimonialsItem";
+import styles from "./Testimonials.module.css"
 
 export function Testimonials(){
     const [testimonials, setTestimonials] = useState([]);
@@ -12,10 +13,10 @@ export function Testimonials(){
     }, []);
 
     return (
-        <section className="testimonials">
+        <section className={styles.testimonials}>
             <div className="container">
                 <h2>Don't take our word for it. See what customers are saying about us.</h2>
-                <div className="testimonials-list">
+                <div className={styles.testimonialsList}>
                 {testimonials.map((testimonial: ITestimonial) => (
                             <TestimonialsItem key={testimonial.id} {...testimonial} />
                         ))};

@@ -1,0 +1,21 @@
+.projects {
+    padding: 50px 0 100px;
+
+    & h2 {
+        margin: 0 auto 50px;
+        max-width: 780px;
+        text-align: center;
+    }
+}
+
+.projectsContainer {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .projectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

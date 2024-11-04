@@ -1,0 +1,11 @@
+.btn {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 39%);
+    color: var(--white);
+    display: block;
+    height: fit-content;
+    padding: 16px;
+    width: fit-content;
+    text-decoration: none;
+}
